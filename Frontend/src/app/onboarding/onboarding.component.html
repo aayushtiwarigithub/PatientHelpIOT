@@ -1,0 +1,441 @@
+<!-- 
+<div class="main">
+    <div class="cards">
+        <div class="cardBox">
+            <h2>New Hire Queue</h2>
+            <div class="tab-count">
+                1
+            </div>
+        </div>
+        <div class="cardBox">
+            <h2>Onboarding Initiated</h2>
+            <div class="tab-count">
+                0
+            </div>
+        </div>
+        <div class="cardBox">
+            <h2>Onboarding Completed</h2>
+            <div class="tab-count">
+                0
+            </div>
+        </div>
+    </div>
+    <div class="utilityBar">
+        <div class="filters">
+            <div class="filterBy">
+                <h4>Joining in</h4>
+                <h5>All</h5>
+            </div>
+            <div class="filterBy">
+                <h4>Status</h4>
+                <h5>All</h5>
+            </div>
+            <div class="filterBy">
+                <h4>Sort By</h4>
+                <h5>Full Name</h5>
+            </div>
+        </div>
+        <div class="search">
+            <img src="../../assets/images/icons8-search-client-80.png" alt="">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search new hires" aria-label="Search new hires">
+        </div>
+    </div>
+    <div class="mainTable">
+        <div class="tableHeader">
+            <div class="tableHeaderValue">
+                <h4>Full Name</h4>
+                <h4>Experience</h4>
+                <h4>Current Role</h4>
+                <h4>Current Company</h4>
+                <h4>Skills</h4>
+                <h4>Certifications</h4>
+              
+            </div>
+        </div>
+        <div class="tableRows">
+            <div class="left">
+                <h4>Jake Peralta</h4>
+                <h4>7</h4>
+                <h4>Detective</h4>
+                <h4>NYPD</h4>
+                <h4>Multi-skilled</h4>
+                <h4>Everything</h4>
+               
+            </div>
+            <div class="right">
+                <div class="menu">
+                    <img src="../../assets/images/icons8-menu-vertical-24.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div> -->
+<div class="main">
+    <div class="row">
+        <div class="col">
+            <div (click)="patientDetails()" class="card" [class.red]="resultArray[0] =='Critical'"
+                [class.green]="resultArray[0] =='Stable'">
+                <div class="image">
+                    <img src="../../assets/images/Basic_Ui_(186).jpg" alt="">
+                </div>
+                <div class="details">
+                    <div class="name">
+                        <h2>Name:</h2>
+                        <h1>Ben</h1>
+                    </div>
+                    <div class="age">
+                        <h2>Age:</h2>
+                        <h1>30</h1>
+                    </div>
+                    <div class="BedNo">
+                        <h2>Bed No.:</h2>
+                        <h2>A-3</h2>
+                    </div>
+                    <div class="Status">
+                        <h2>{{resultArray[0]}}</h2>
+                        <svg *ngIf="resultArray[0] =='Critical'" height="50" width="100" class="blinking">
+                            <circle cx="25" cy="25" r="10" fill="red" />
+                        </svg>
+
+                    </div>
+                    <p class="parameter">Blood Pressure</p>
+                    <div class="progressBar1">
+                        <!-- <span class="score-lablel">Score:</span> -->
+                       
+                        <div class="data">
+                            <!-- <p>150</p> -->
+                            <div class="outerBar">
+                                <div class="innerBar" style="width: 100%; background-color: red;">
+                                    <div>
+                                        140 mmHg</div>
+                                </div>
+                            </div>
+                            <p style="margin:0;">&lt;120 mmHg</p>
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+
+        </div>
+        <div class="col">
+            <div class="card" [class.red]="resultArray[1] =='Critical'" [class.green]="resultArray[1] =='Stable'">
+                <div class="image">
+                    <img src="../../assets/images/Basic_Ui_(186).jpg" alt="">
+                </div>
+                <div class="details">
+                    <div class="name">
+                        <h2>Name:</h2>
+                        <h1>Daniel</h1>
+                    </div>
+                    <div class="age">
+                        <h2>Age:</h2>
+                        <h1>40</h1>
+                    </div>
+                    <div class="BedNo">
+                        <h2>Bed No.:</h2>
+                        <h2>A-12</h2>
+                    </div>
+                    <div class="Status">
+                        <h2>{{resultArray[1]}}</h2>
+                        <svg *ngIf="resultArray[1] =='Critical'" height="50" width="100" class="blinking">
+                            <circle cx="25" cy="25" r="10" fill="red" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col">
+            <div class="card" [class.red]="resultArray[2] =='Critical'" [class.green]="resultArray[2] =='Stable'">
+                <div class="image">
+                    <img src="../../assets/images/Basic_Ui_(186).jpg" alt="">
+                </div>
+                <div class="details">
+                    <div class="name">
+                        <h2>Name:</h2>
+                        <h1>Marie</h1>
+                    </div>
+                    <div class="age">
+                        <h2>Age:</h2>
+                        <h1>61</h1>
+                    </div>
+                    <div class="BedNo">
+                        <h2>Bed No.:</h2>
+                        <h2>B-22</h2>
+                    </div>
+                    <div class="Status">
+                        <h2>{{resultArray[2]}}</h2>
+                        <svg *ngIf="resultArray[2] =='Critical'" height="50" width="100" class="blinking">
+                            <circle cx="25" cy="25" r="10" fill="red" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col">
+            <div class="card" [class.red]="resultArray[3] =='Critical'" [class.green]="resultArray[3] =='Stable'">
+                <div class="image">
+                    <img src="../../assets/images/Basic_Ui_(186).jpg" alt="">
+                </div>
+                <div class="details">
+                    <div class="name">
+                        <h2>Name:</h2>
+                        <h1>Sylvie</h1>
+                    </div>
+                    <div class="age">
+                        <h2>Age:</h2>
+                        <h1>52</h1>
+                    </div>
+                    <div class="BedNo">
+                        <h2>Bed No.:</h2>
+                        <h2>B-3</h2>
+                    </div>
+                    <div class="Status">
+                        <h2>{{resultArray[3]}}</h2>
+                        <svg *ngIf="resultArray[3] =='Critical'" height="50" width="100" class="blinking">
+                            <circle cx="25" cy="25" r="10" fill="red" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+                <div class="card" [class.red]="resultArray[4] =='Critical'" [class.green]="resultArray[4] =='Stable'">
+                    <div class="image">
+                        <img src="../../assets/images/Basic_Ui_(186).jpg" alt="">
+                    </div>
+                    <div class="details">
+                        <div class="name">
+                            <h2>Name:</h2>
+                            <h1>Bob</h1>
+                        </div>
+                        <div class="age">
+                            <h2>Age:</h2>
+                            <h1>55</h1>
+                        </div>
+                        <div class="BedNo">
+                            <h2>Bed No.:</h2>
+                            <h2>A-13</h2>
+                        </div>
+                        <div class="Status">
+                            <h2>{{resultArray[4]}}</h2>
+                            <svg *ngIf="resultArray[4] =='Critical'" height="50" width="100" class="blinking">
+                                <circle cx="25" cy="25" r="10" fill="red" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+    
+        </div>
+    </div>
+    <div class="row">
+      
+        <div class="col">
+            <div class="card" [class.red]="resultArray[5] =='Critical'" [class.green]="resultArray[5] =='Stable'">
+                <div class="image">
+                    <img src="../../assets/images/Basic_Ui_(186).jpg" alt="">
+                </div>
+                <div class="details">
+                    <div class="name">
+                        <h2>Name:</h2>
+                        <h1>Charlie</h1>
+                    </div>
+                    <div class="age">
+                        <h2>Age:</h2>
+                        <h1>30</h1>
+                    </div>
+                    <div class="BedNo">
+                        <h2>Bed No.:</h2>
+                        <h2>A-9</h2>
+                    </div>
+                    <div class="Status">
+                        <h2>{{resultArray[5]}}</h2>
+                        <svg *ngIf="resultArray[5] =='Critical'" height="50" width="100" class="blinking">
+                            <circle cx="25" cy="25" r="10" fill="red" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col">
+            <div class="card" [class.red]="resultArray[6] =='Critical'" [class.green]="resultArray[6] =='Stable'">
+                <div class="image">
+                    <img src="../../assets/images/Basic_Ui_(186).jpg" alt="">
+                </div>
+                <div class="details">
+                    <div class="name">
+                        <h2>Name:</h2>
+                        <h1>Mike</h1>
+                    </div>
+                    <div class="age">
+                        <h2>Age:</h2>
+                        <h1>30</h1>
+                    </div>
+                    <div class="BedNo">
+                        <h2>Bed No.:</h2>
+                        <h2>A-10</h2>
+                    </div>
+                    <div class="Status">
+                        <h2>{{resultArray[6]}}</h2>
+                        <svg *ngIf="resultArray[6] =='Critical'" height="50" width="100" class="blinking">
+                            <circle cx="25" cy="25" r="10" fill="red" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col">
+            <div class="card" [class.red]="resultArray[7] =='Critical'" [class.green]="resultArray[7] =='Stable'">
+                <div class="image">
+                    <img src="../../assets/images/Basic_Ui_(186).jpg" alt="">
+                </div>
+                <div class="details">
+                    <div class="name">
+                        <h2>Name:</h2>
+                        <h1>Anna</h1>
+                    </div>
+                    <div class="age">
+                        <h2>Age:</h2>
+                        <h1>30</h1>
+                    </div>
+                    <div class="BedNo">
+                        <h2>Bed No.:</h2>
+                        <h2>A-5</h2>
+                    </div>
+                    <div class="Status">
+                        <h2>{{resultArray[7]}}</h2>
+                        <svg *ngIf="resultArray[7] =='Critical'" height="50" width="100" class="blinking">
+                            <circle cx="25" cy="25" r="10" fill="red" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col">
+            <div class="card" [class.red]="resultArray[8] =='Critical'" [class.green]="resultArray[8] =='Stable'">
+                <div class="image">
+                    <img src="../../assets/images/Basic_Ui_(186).jpg" alt="">
+                </div>
+                <div class="details">
+                    <div class="name">
+                        <h2>Name:</h2>
+                        <h1>Jake</h1>
+                    </div>
+                    <div class="age">
+                        <h2>Age:</h2>
+                        <h1>34</h1>
+                    </div>
+                    <div class="BedNo">
+                        <h2>Bed No.:</h2>
+                        <h2>A-7</h2>
+                    </div>
+                    <div class="Status">
+                        <h2>{{resultArray[8]}}</h2>
+                        <svg *ngIf="resultArray[8] =='Critical'" height="50" width="100" class="blinking">
+                            <circle cx="25" cy="25" r="10" fill="red" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col">
+            <div class="card" [class.red]="resultArray[9] =='Critical'" [class.green]="resultArray[9] =='Stable'">
+                <div class="image">
+                    <img src="../../assets/images/Basic_Ui_(186).jpg" alt="">
+                </div>
+                <div class="details">
+                    <div class="name">
+                        <h2>Name:</h2>
+                        <h1>Ross</h1>
+                    </div>
+                    <div class="age">
+                        <h2>Age:</h2>
+                        <h1>33</h1>
+                    </div>
+                    <div class="BedNo">
+                        <h2>Bed No.:</h2>
+                        <h2>A-8</h2>
+                    </div>
+                    <div class="Status">
+                        <h2>{{resultArray[9]}}</h2>
+                        <svg *ngIf="resultArray[9] =='Critical'" height="50" width="100" class="blinking">
+                            <circle cx="25" cy="25" r="10" fill="red" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+       
+      
+        <div class="col">
+            <div class="card" [class.red]="resultArray[10] =='Critical'" [class.green]="resultArray[10] =='Stable'">
+                <div class="image">
+                    <img src="../../assets/images/Basic_Ui_(186).jpg" alt="">
+                </div>
+                <div class="details">
+                    <div class="name">
+                        <h2>Name:</h2>
+                        <h1>Amy</h1>
+                    </div>
+                    <div class="age">
+                        <h2>Age:</h2>
+                        <h1>47</h1>
+                    </div>
+                    <div class="BedNo">
+                        <h2>Bed No.:</h2>
+                        <h2>A-4</h2>
+                    </div>
+                    <div class="Status">
+                        <h2>{{resultArray[10]}}</h2>
+                        <svg *ngIf="resultArray[10] =='Critical'" height="50" width="100" class="blinking">
+                            <circle cx="25" cy="25" r="10" fill="red" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- <div class="col">
+            <div class="card" [class.red]="resultArray[11] =='Critical'" [class.green]="resultArray[11] =='Stable'">
+                <div class="image">
+                    <img src="../../assets/images/patient.png" alt="">
+                </div>
+                <div class="details">
+                    <div class="name">
+                        <h2>Name:</h2>
+                        <h1>Hannah</h1>
+                    </div>
+                    <div class="age">
+                        <h2>Age:</h2>
+                        <h1>32</h1>
+                    </div>
+                    <div class="BedNo">
+                        <h2>Bed No.:</h2>
+                        <h2>B-4</h2>
+                    </div>
+                    <div class="Status">
+                        <h2>{{resultArray[11]}}</h2>
+                        <svg *ngIf="resultArray[11] =='Critical'" height="50" width="100" class="blinking">
+                            <circle cx="25" cy="25" r="10" fill="red" />
+                        </svg>
+                    </div>
+
+                </div>
+            </div>
+
+        </div> -->
+    </div>
+</div>
+<div class="footerClass">
+    © 2022 Optum. All rights reserved.
+</div>

@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+
+
+/************ Optum Sans ************/
+
+
+/* Normal */
+
+@font-face {
+    font-family: 'Optum Sans';
+    src: url('https://stg-www.optum.com/content/dam/optum3/id-mvp/assets/fonts/optum-sans/woff2/OptumSans-Regular.woff2') format('woff2'), url('https://stg-www.optum.com/content/dam/optum3/id-mvp/assets/fonts/optum-sans/ttf/OptumSans-Regular.ttf') format('truetype'), url('https://stg-www.optum.com/content/dam/optum3/id-mvp/assets/fonts/optum-sans/otf/OptumSans-Regular.otf') format('opentype');
+    font-style: normal;
+    font-weight: 100 400;
+}
+
+
+/* Bold */
+
+@font-face {
+    font-family: 'Optum Sans';
+    src: url('https://stg-www.optum.com/content/dam/optum3/id-mvp/assets/fonts/optum-sans/woff2/OptumSans-Bold.woff2') format('woff2'), url('https://stg-www.optum.com/content/dam/optum3/id-mvp/assets/fonts/optum-sans/ttf/OptumSans-Bold.ttf') format('truetype'), url('https://stg-www.optum.com/content/dam/optum3/id-mvp/assets/fonts/optum-sans/otf/OptumSans-Bold.otf') format('opentype');
+    font-style: normal;
+    font-weight: 500 700;
+}
+
+
+/* Extra-bold */
+
+@font-face {
+    font-family: 'Optum Sans';
+    src: url('https://stg-www.optum.com/content/dam/optum3/id-mvp/assets/fonts/optum-sans/woff2/OptumSans-XBold.woff2') format('woff2'), url('https://stg-www.optum.com/content/dam/optum3/id-mvp/assets/fonts/optum-sans/ttf/OptumSans-XBold.ttf') format('truetype'), url('https://stg-www.optum.com/content/dam/optum3/id-mvp/assets/fonts/optum-sans/otf/OptumSans-XBold.otf') format('opentype');
+    font-style: normal;
+    font-weight: 800 1000;
+}
+
+
+/* Italic */
+
+@font-face {
+    font-family: 'Optum Sans';
+    src: url('https://stg-www.optum.com/content/dam/optum3/id-mvp/assets/fonts/optum-sans/woff2/OptumSans-RegularItalic.woff2') format('woff2'), url('https://stg-www.optum.com/content/dam/optum3/id-mvp/assets/fonts/optum-sans/ttf/OptumSans-RegularItalic.ttf') format('truetype'), url('https://stg-www.optum.com/content/dam/optum3/id-mvp/assets/fonts/optum-sans/otf/OptumSans-RegularItalic.otf') format('opentype');
+    font-style: italic;
+    font-weight: 100 400;
+}
+
+
+/* Bold Italic */
+
+@font-face {
+    font-family: 'Optum Sans';
+    src: url('https://stg-www.optum.com/content/dam/optum3/id-mvp/assets/fonts/optum-sans/woff2/OptumSans-BoldItalic.woff2') format('woff2'), url('https://stg-www.optum.com/content/dam/optum3/id-mvp/assets/fonts/optum-sans/ttf/OptumSans-BoldItalic.ttf') format('truetype'), url('https://stg-www.optum.com/content/dam/optum3/id-mvp/assets/fonts/optum-sans/otf/OptumSans-BoldItalic.otf') format('opentype');
+    font-style: italic;
+    font-weight: 500 700;
+}
